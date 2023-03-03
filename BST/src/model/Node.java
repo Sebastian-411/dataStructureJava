@@ -1,25 +1,21 @@
 package model;
 
-public abstract class Node {
+public class Node {
     private Node left, right;
 
-    private ScoreRegistry score;
+    String key;
 
+    public Node(String key) {
+        this.key = key;
+    }
+
+    public String getKey() {
+        return key;
+    }
 
 
     // getters and setters
 
-    public Node(ScoreRegistry score) {
-        this.score = score;
-    }
-
-    public ScoreRegistry getScore() {
-        return score;
-    }
-
-    public void setScore(ScoreRegistry score) {
-        this.score = score;
-    }
 
     public Node getLeft() {
         return left;
@@ -37,4 +33,7 @@ public abstract class Node {
         this.right = right;
     }
 
+    public void setKey(String key) {
+        this.key = key;
+    }
 }
