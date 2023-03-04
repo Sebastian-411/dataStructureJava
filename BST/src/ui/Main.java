@@ -20,6 +20,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println(controller.print());
+                    break;
                 case 3:
                     System.out.println("La profundidad es de " + controller.deep());
                     break;
@@ -34,10 +35,14 @@ public class Main {
     private void addNode(){
         System.out.println("Ingresa los nombres");
         String name = sc.nextLine();
-        if(controller.addNode(name)){
-            System.out.println("Los usuarios han sido creados con exito");
-        } else {
+        if(name.equals(" ") || name.equals("")){
             System.out.println("Ha ocurrido un error");
+        } else {
+            if ( controller.addNode(name) ){
+                System.out.println("Los usuarios han sido creados con exito");
+            } else {
+                System.out.println("Ha ocurrido un error");
+            }
         }
     }
 }

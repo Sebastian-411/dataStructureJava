@@ -31,7 +31,6 @@ public class Tree {
                 addNode(current.getRight(), node);
             }
         }
-
     }
 
     // print data
